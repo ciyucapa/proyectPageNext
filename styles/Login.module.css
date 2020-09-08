@@ -3,9 +3,8 @@
     height: 100%;
     padding-bottom: 30px;
     padding-top: 20px;
-    margin-top: 2rem;
     display: flex;
-    position: center;
+    position: absolute;
     justify-content: center;
     align-items: center;
     align-content: center;
@@ -13,6 +12,7 @@
     text-align: center;
     color: #0099ff;
     font-size: 1rem;
+    background: #b2f9ff; background: -moz-linear-gradient(135deg,  #b2f9ff 0%,#efebbe 100%); background: -webkit-linear-gradient(135deg,  #b2f9ff 0%,#efebbe 100%); background: linear-gradient(135deg,  #b2f9ff 0%,#efebbe 100%);
 }
 
 .title{
@@ -28,7 +28,7 @@
     padding: 8px ;
     border: none;
     border-radius: 100px;
-    background: #4EC7F7;
+
 }
 
 .input:focus{
