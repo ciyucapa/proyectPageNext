@@ -1,17 +1,17 @@
 import Head from 'next/head';
 import styles from '../styles/Home.module.css'
-import Navigation from "./navigation";
+import Navigation from "../v1/component/commons/navigation";
 
-export default function Home() {
+const Home = () => {
   return (
     <div className={styles.container}>
+        <Navigation/>
       <Head>
-        <title>Weet...</title>
+        <title> Brilliant Jump...</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Navigation/>
       <main className={styles.main}>
-        <h1>Mente Creativa</h1>
+        <h1 className={styles.tittle}>Brilliant Jump</h1>
           <section>
               <div>
                   <img src="/desing.png" />
@@ -27,3 +27,5 @@ export default function Home() {
     </div>
   );
 };
+
+export default Home;

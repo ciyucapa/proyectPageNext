@@ -1,13 +1,13 @@
-import Navigation from "../navigation";
-import styles from "../../styles/Login.module.css";
+import styles from "../../../styles/Login.module.css";
 import {ErrorMessage, Field, Form, Formik} from "formik";
+import SceneBase from "../SceneBase";
 
-export default function Register() {
+const Register = () => {
     return (
         <div>
-            <Navigation/>
+
             <div className={styles.box}>
-                <h1 className={styles.title}>Registro de usuario</h1>
+                <h1 className={styles.title}>User register</h1>
                 <Formik
                     initialValues={{ firstName: '', lastName: '', email: '', password: '', repeatPassword: '' }}
                     validate={values => {
@@ -23,10 +23,10 @@ export default function Register() {
                             errors.email = 'Required';
                         }
                         if (values.password.length < 5 ) {
-                            errors.password = "no debe exceder de 4 digitos"
+                            errors.password = "must not exceed 4 digits"
                         }
                         if (values.password === values.repeatPassword ) {
-                            errors.repeatPassword = "debe ser igual a la contraseña"
+                            errors.repeatPassword = "must be equal to the password"
                         }
                         return errors;
                     }}
@@ -36,45 +36,43 @@ export default function Register() {
                     }}
                 >
                     {({
-                          values,
-                          errors,
                           isSubmitting,
                           isValid,
                       }) => (
                         <Form>
-                            <label >Nombres
+                            <label>Name
                                 <Field type="firstName" name="firstName" className={styles.input}  />
                             </label>
                             <ErrorMessage name="firstName" component="div" />
-                            <label >Apellidos
+                            <label>LastName
                                 <Field type="lastName" name="lastName" className={styles.input} />
                             </label>
                             <ErrorMessage name="lastName" component="div" />
-                            <label >Correo electronico
+                            <label>Email
                                 <Field type="email" name="email" className={styles.input} />
                             </label>
                             <ErrorMessage name="email" component="div" />
-                            <label >Constraseña
+                            <label>Password
                                 <Field type="password" name="password" className={styles.input} />
                             </label>
                             <ErrorMessage name="password" component="div" />
-                            <label >Confirmar constraseña
+                            <label>Repeat Password
                                 <Field type="password" name="repeatPassword" className={styles.input} />
                             </label>
                             <ErrorMessage name="repeatPassword" component="div" />
                             <button
                                 type="submit"
                                 disabled={isSubmitting || isValid }
-                                className={styles.boton}
+                                className={styles.button}
                             >
-                                Enviar
+                                Send
                             </button>
-
                         </Form>
                     )}
                 </Formik>
             </div>
         </div>
-
     );
 };
+
+export default SceneBase(Register);

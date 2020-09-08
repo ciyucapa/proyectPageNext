@@ -1,6 +1,5 @@
 import Link from "next/link";
-import styles from "../../styles/Navigation.module.css";
-import React from "react";
+import styles from "../../../../styles/Navigation.module.css";
 
 export default function Navigation () {
     return(
@@ -10,15 +9,15 @@ export default function Navigation () {
                     <a className={styles.title}>Home</a>
                 </Link>
                 <Link href="/productos" >
-                    <a className={styles.title}>Productos</a>
+                    <a className={styles.title}>Product</a>
                 </Link>
             </div>
-            <div>
-                <Link href="../login">
+            <div className={styles.boxOne}>
+                <Link href="/login">
                     <a  className={styles.title}>Login</a>
                 </Link>
-                <Link href="../registro">
-                    <a  className={styles.title}>Registro</a>
+                <Link href="/register">
+                    <a  className={styles.title}>Register</a>
                 </Link>
             </div>
         </nav>

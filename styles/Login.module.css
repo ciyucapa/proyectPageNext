@@ -1,33 +1,58 @@
 .box{
     width: 100%;
     height: 100%;
+    padding-bottom: 30px;
+    padding-top: 20px;
+    margin-top: 2rem;
     display: flex;
-    position: absolute;
+    position: center;
     justify-content: center;
     align-items: center;
+    align-content: center;
     flex-direction: column;
     text-align: center;
     color: #0099ff;
+    font-size: 1rem;
 }
 
 .title{
     color: #1c5488;
+    font-size: 2rem;
 }
 
 .input {
     display: block;
     text-align: center;
-    position: center;
-    margin-top: 1rem;
+    margin-top: 0.5rem;
     margin-bottom: 0.5rem;
-    padding: 5px 5px;
+    padding: 8px ;
+    border: none;
+    border-radius: 100px;
+    background: #4EC7F7;
 }
 
-.boton{
+.input:focus{
+    outline: none;
+}
+
+.button{
     margin-top: 1rem;
-    padding: 5px;
+    padding: 5px 20px;
     font-size: 1rem;
     font-weight: bold;
+    border: none;
+    border-radius: 50px;
+}
+
+.button:focus{
+    outline: none;
+}
+
+.error{
+    color: red;
+    text-align: center;
+    align-content: center;
+    padding: 5px;
 }
 
 
