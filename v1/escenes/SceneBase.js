@@ -25,7 +25,6 @@ export default (Child) => {
             if(Child.getInitialProps)
                 return Child.getInitialProps(ctx);
         }
-
         render() {
             return <SceneBase Child={Child} />
         }
