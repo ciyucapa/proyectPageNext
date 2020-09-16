@@ -3,13 +3,10 @@ import ItemCard from "./itemCard";
 const CardText = () => {
     return(
         <div className="card-container">
-            <div className="card-box">
-                <h1>Cojines Decorativos</h1>
-            </div>
             <div className="card">
-                <ItemCard title={"Spiderman"} src='/spiderman.jpg' />
-                <ItemCard title={"Pizza"} src='/pizza.jpg' />
-                <ItemCard title={"Spiderman"} src='/spiderman.jpg' />
+                <ItemCard title={"Cojin Decorativo"} text={"Spiderman"} src='/spiderman.jpg' alt="cojin" />
+                <ItemCard title={"Cojin Infantil"} text={"Estrella"} src='/pizza.jpg' alt="cojin"/>
+                <ItemCard title={"Cojin Navideño"} text={"Santa Closs"} src='/spiderman.jpg' alt="cojin"/>
             </div>
         </div>
     );
