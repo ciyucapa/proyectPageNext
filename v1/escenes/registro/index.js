@@ -1,13 +1,12 @@
-import styles from "../../../styles/Login.module.css";
+
 import {ErrorMessage, Field, Form, Formik} from "formik";
 import SceneBase from "../SceneBase";
 
 const Register = () => {
     return (
         <div>
-
-            <div className={styles.box}>
-                <h1 className={styles.title}>User register</h1>
+            <div className="box-login">
+                <h1 className="form-title">User register</h1>
                 <Formik
                     initialValues={{ firstName: '', lastName: '', email: '', password: '', repeatPassword: '' }}
                     validate={values => {
@@ -41,29 +40,29 @@ const Register = () => {
                       }) => (
                         <Form>
                             <label>Name
-                                <Field type="firstName" name="firstName" className={styles.input}  />
+                                <Field type="firstName" name="firstName" className="input"/>
                             </label>
-                            <ErrorMessage name="firstName" component="div" />
+                            <ErrorMessage name="firstName" component="div"/>
                             <label>LastName
-                                <Field type="lastName" name="lastName" className={styles.input} />
+                                <Field type="lastName" name="lastName" className="input"/>
                             </label>
-                            <ErrorMessage name="lastName" component="div" />
+                            <ErrorMessage name="lastName" component="div"/>
                             <label>Email
-                                <Field type="email" name="email" className={styles.input} />
+                                <Field type="email" name="email" className="input"/>
                             </label>
-                            <ErrorMessage name="email" component="div" />
+                            <ErrorMessage name="email" component="div"/>
                             <label>Password
-                                <Field type="password" name="password" className={styles.input} />
+                                <Field type="password" name="password" className="input"/>
                             </label>
-                            <ErrorMessage name="password" component="div" />
+                            <ErrorMessage name="password" component="div"/>
                             <label>Repeat Password
-                                <Field type="password" name="repeatPassword" className={styles.input} />
+                                <Field type="password" name="repeatPassword" className="input"/>
                             </label>
-                            <ErrorMessage name="repeatPassword" component="div" />
+                            <ErrorMessage name="repeatPassword" component="div"/>
                             <button
                                 type="submit"
                                 disabled={isSubmitting || isValid }
-                                className={styles.button}
+                                className="button"
                             >
                                 Send
                             </button>

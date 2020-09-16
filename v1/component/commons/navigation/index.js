@@ -1,23 +1,24 @@
+import React from 'react';
 import Link from "next/link";
-import styles from "../../../../styles/Navigation.module.css";
 
 export default function Navigation () {
     return(
-        <nav className={styles.box}>
-            <div className={styles.boxOne}>
+        <nav className="box-navbar">
+            <div className="navbar-one">
+                <span>LOGO</span>
                 <Link href="/">
-                    <a className={styles.title}>Home</a>
+                    <a className="navbar-title">Home</a>
                 </Link>
                 <Link href="/productos" >
-                    <a className={styles.title}>Product</a>
+                    <a className="navbar-title">Product</a>
                 </Link>
             </div>
-            <div className={styles.boxOne}>
+            <div className="navbar-one">
                 <Link href="/login">
-                    <a  className={styles.title}>Login</a>
+                    <a className="navbar-title">Login</a>
                 </Link>
                 <Link href="/register">
-                    <a  className={styles.title}>Register</a>
+                    <a className="navbar-title">Register</a>
                 </Link>
             </div>
         </nav>

@@ -1,4 +1,4 @@
-.box{
+.box-login{
     width: 100%;
     height: 100%;
     padding-bottom: 30px;
@@ -12,10 +12,11 @@
     text-align: center;
     color: #0099ff;
     font-size: 1rem;
+    font-weight: bold;
     background: #b2f9ff; background: -moz-linear-gradient(135deg,  #b2f9ff 0%,#efebbe 100%); background: -webkit-linear-gradient(135deg,  #b2f9ff 0%,#efebbe 100%); background: linear-gradient(135deg,  #b2f9ff 0%,#efebbe 100%);
 }
 
-.title{
+.form-title{
     color: #1c5488;
     font-size: 2rem;
 }

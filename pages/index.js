@@ -14,7 +14,7 @@ const Home = () => {
       </Head>
         <Navigation/>
       <main className={styles.main}>
-          <h1 className={styles.tittle}>Brilliant Jump</h1>
+          <h1>Brilliant Jump</h1>
           <section>
             <CardText/>
           </section>

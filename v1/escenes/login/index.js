@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from "../../../styles/Login.module.css";
+
 import {Formik, Form, Field, ErrorMessage} from 'formik';
 import SceneBase from "../SceneBase";
 
@@ -7,9 +7,9 @@ const Login = () => {
 
     return (
         <div>
-            <div className={styles.box}>
+            <div className="box-login">
                 <img src="/login.png" style={{width:150, height:150 }} alt="login"/>
-                <h1 className={styles.title}>Login In</h1>
+                <h1 className="form-title">Login In</h1>
                 <Formik
                     initialValues={{ email: '', password: '' }}
 
@@ -34,17 +34,17 @@ const Login = () => {
                       }) => (
                         <Form>
                             <label>Email
-                                <Field type="email" name="email" className={styles.input}/>
+                                <Field type="email" name="email" className="input"/>
                             </label>
-                            <ErrorMessage name="email" component="div" className={styles.error} />
+                            <ErrorMessage name="email" component="div" className="error"/>
                             <label>Password
-                                <Field type="password" name="password" className={styles.input}/>
+                                <Field type="password" name="password" className="input"/>
                             </label>
-                            <ErrorMessage name="password" component="div" className={styles.error} />
+                            <ErrorMessage name="password" component="div" className="error"/>
                             <button
                                 type="submit"
                                 disabled={isSubmitting || isValid }
-                                className={styles.button}
+                                className="button"
                             >
                                 Send
                             </button>
