@@ -7,20 +7,19 @@ import Footer from "../v1/component/commons/Footer";
 
 const Home = () => {
   return (
-    <div className={styles.container}>
+    <div>
       <Head>
         <title> Brilliant Jump...</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
         <Navigation/>
-      <main className={styles.main}>
-          <h1>Brilliant Jump</h1>
+      <main>
           <section>
             <CardText/>
           </section>
           <Slider/>
       </main>
-      <footer className={styles.footer}>
+      <footer>
         <Footer/>
       </footer>
     </div>

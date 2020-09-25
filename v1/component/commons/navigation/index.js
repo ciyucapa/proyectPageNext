@@ -5,8 +5,10 @@ export default function Navigation () {
     return(
         <nav className="box-navbar">
             <div className="navbar-one">
-                <span>LOGO</span>
                 <Link href="/">
+                    <a><img src='/Sarahistyles.png' style={{width: 80, height: 80}}/></a>
+                </Link>
+                <Link href="/home">
                     <a className="navbar-title">Home</a>
                 </Link>
                 <Link href="/productos" >
