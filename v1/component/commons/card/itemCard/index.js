@@ -17,13 +17,13 @@ const ItemCard = (props) => {
                 <h2 className="card-title">{title}</h2>
                 <h3 className=" card-text col-md">{text}</h3>
                 {src === SPIDERMAN_ICON && (
-                    <img src={'/spiderman.jpg'} className="card-image" alt="cojines" />
+                    <img src={'/spiderman.jpg'} className="card-image" alt="cojineSpiderman" />
                 )}
                 {src === PINGUINO_ICON && (
-                    <img src={'/pinguino.jpg'} className="card-image" alt="cojines" />
+                    <img src={'/pinguino.jpg'} className="card-image" alt="cojinePinguino" />
                 )}
                 {src === ESTRELLA_ICON && (
-                    <img src={'/start.jpg'} className="card-image" alt="cojines" />
+                    <img src={'/start.jpg'} className="card-image" alt="cojineStar" />
                 )}
             </div>
         </div>
