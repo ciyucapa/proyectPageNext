@@ -1,10 +1,10 @@
 import React from 'react';
-import {Container} from "next/app";
+import Container from "../container";
 
 const Slider = () => {
     return(
-        <div className="sliderBox">
-            <Container>
+        <Container>
+            <div className="sliderBox">
                 <div className="slider">
                     <ul>
                         <li><img src="/image1.jpg" alt="cushions" /></li>
@@ -13,8 +13,8 @@ const Slider = () => {
                         <li><img src="/image1.jpg" alt="cushions" /></li>
                     </ul>
                 </div>
-            </Container>
-        </div>
+            </div>
+        </Container>
     )
 };
 
