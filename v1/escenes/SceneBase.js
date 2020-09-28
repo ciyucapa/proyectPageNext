@@ -1,14 +1,14 @@
 import PropTypes from 'prop-types';
 import React from 'react'
 
-import Navigation from "../component/commons/navigation";
+import NavBar from "../component/commons/navigation";
 import Footer from "../component/commons/Footer";
 
 const SceneBase = (props) => {
     const {Child} = props;
     return (
         <div>
-            <Navigation />
+            <NavBar/>
             <Child />
             <footer>
                 <Footer/>

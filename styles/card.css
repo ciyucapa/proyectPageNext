@@ -1,26 +1,20 @@
 .card-container{
+    align-content: center;
+    align-items: center;
     background: #66d7d1;
-    width:100%;
     display: flex;
-    flex-direction: column;
-    padding-top: 40px;
+    width:100%;
+    padding-top: 90px;
     padding-bottom: 40px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
 }
 
 .card-box{
     text-align: center;
     color: #efebbe;
-}
-
-.card {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-content: center;
-    align-items: center;
-    text-align: center;
 }
 
 .card-contain{
