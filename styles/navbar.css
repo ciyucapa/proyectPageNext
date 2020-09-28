@@ -3,6 +3,10 @@
     height: 70px;
     background: #ff637d;
     display: flex;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1000000000;
 }
 
 .box-contain-one{
@@ -11,8 +15,6 @@
     align-items: center;
     justify-content: space-between;
     flex-direction: row;
-    z-index: 100000;
-    top: 0;
 }
 
 .box-one{
@@ -53,6 +55,10 @@
     display: none;
 }
 
+.menu{
+    display: none;
+}
+
 @media (max-width: 919px) {
     .col-md {
         display: none;
@@ -64,6 +70,7 @@
         height: 30px;
         margin-left: 1rem;
         margin-right: 1rem;
+        opacity: 0.5;
     }
 
     .contain{
@@ -76,20 +83,35 @@
     }
 
     .menu{
-        background: lightgray;
+        background: #f4f1bb;
         display: flex;
         flex-direction: column;
         position: fixed;
         left: 0;
         top: 65px;
         width: 100%;
-        padding: 7px 0;
     }
 
     .menu-title{
         font-size: 15px;
         display: block;
-        margin-left: 20px;
+        padding-left:20px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .menu-title:hover {
+        background: #ff637d;
+        opacity: 0.5;
+        color: #f6f6f6;
+    }
+
+    .icon {
+        display: block;
+        width: 20px;
+        height: 20px;
+        opacity: 0.5;
+        margin-right: 10px;
     }
 }
 

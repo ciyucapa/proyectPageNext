@@ -2,12 +2,15 @@ import React, {useState} from 'react';
 import Link from "next/link";
 
 import Container from "../container";
+import ItemNavbar, {HOME_ICON, LOGIN_ICON, REGISTER_ICON, PRODUCT_ICON} from "./itemNavbar";
 
 export default function Navigation () {
 
     const[mostrarMenu, setMostrar] = useState(false);
+    const[cambiarIcono, setIcon] = useState(false);
     const handleMostrar = () => {
         setMostrar(!mostrarMenu);
+        setIcon(!cambiarIcono);
     }
 
     return(
@@ -16,7 +19,7 @@ export default function Navigation () {
                 <div className="contain">
                     <img src="/logo.gif" className="navbar-logo"/>
                     <div>
-                        <img src="/menuCirculo.png" className="col-mf navbar-icon" onClick={handleMostrar}/>
+                        <img src={!cambiarIcono ? "/menuCirculo.png" : "/cerrar.png"} className="col-mf navbar-icon" onClick={handleMostrar}/>
                     </div>
                 </div>
                 <div className="box-contain-one col-md">
@@ -28,7 +31,7 @@ export default function Navigation () {
                             <a className="navbar-title">Product</a>
                         </Link>
                     </div>
-                    <div className="navbar-one menu">
+                    <div className="navbar-one">
                         <Link href="/login">
                             <a className="navbar-title">Login</a>
                         </Link>
@@ -38,10 +41,10 @@ export default function Navigation () {
                     </div>
                 </div>
                 <div className={!mostrarMenu ? "col-mf" : "menu"}>
-                    <Link className="col-mf menu-title" href="/"><a>Home</a></Link>
-                    <Link className="col-mf menu-title" href="/productos"><a>Product</a></Link>
-                    <Link className="col-mf menu-title" href="/login"><a>Login</a></Link>
-                    <Link className="col-mf menu-title" href="/register"><a>Register</a></Link>
+                    <ItemNavbar title={"Home"} href={"/"} isIcon={HOME_ICON}/>
+                    <ItemNavbar title={"Login"} href={"/login"} isIcon={LOGIN_ICON}/>
+                    <ItemNavbar title={"Register"} href={"/register"} isIcon={REGISTER_ICON}/>
+                    <ItemNavbar title={"Product"} href={"/productos"} isIcon={PRODUCT_ICON}/>
                 </div>
             </div>
         </Container>
