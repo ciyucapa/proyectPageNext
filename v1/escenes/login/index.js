@@ -1,7 +1,7 @@
 import React from 'react'
 
 import {Formik, Form, Field, ErrorMessage} from 'formik';
-import SceneBase from "../SceneBase";
+import * as Yup from 'yup';
 
 const Login = () => {
 
@@ -17,9 +17,13 @@ const Login = () => {
                         const errors = {};
                         if (!values.email) {
                             errors.email = 'Required';
+                        } else if (
+                            !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)
+                        ) {
+                            errors.email = 'Invalid email address';
                         }
-                        if (values.password.length > 8 ) {
-                            errors.password = "must be greater than 8 characters"
+                        if(values.password.length < 5){
+                            errors.password = 'Debe ser Mayor a 5 digitos';
                         }
                         return errors;
                     }}
@@ -33,20 +37,12 @@ const Login = () => {
                           isValid,
                       }) => (
                         <Form>
-                            <label>Email
-                                <Field type="email" name="email" className="input"/>
-                            </label>
-                            <ErrorMessage name="email" component="div" className="error"/>
-                            <label>Password
-                                <Field type="password" name="password" className="input"/>
-                            </label>
-                            <ErrorMessage name="password" component="div" className="error"/>
-                            <button
-                                type="submit"
-                                disabled={isSubmitting || isValid }
-                                className="button"
-                            >
-                                Send
+                            <Field type="email" name="email"/>
+                            <ErrorMessage name="email" component="div" className="error" />
+                            <Field type="password" name="password"/>
+                            <ErrorMessage name="password" component="div" className="error" />
+                            <button type="submit" disabled={isSubmitting}>
+                                Submit
                             </button>
                         </Form>
                     )}
@@ -56,4 +52,4 @@ const Login = () => {
     )
 };
 
-export default SceneBase(Login);
+export default Login;

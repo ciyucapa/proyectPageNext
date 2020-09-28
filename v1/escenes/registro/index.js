@@ -1,6 +1,5 @@
 
 import {ErrorMessage, Field, Form, Formik} from "formik";
-import SceneBase from "../SceneBase";
 
 const Register = () => {
     return (
@@ -8,24 +7,22 @@ const Register = () => {
             <div className="box-login">
                 <h1 className="form-title">User register</h1>
                 <Formik
-                    initialValues={{ firstName: '', lastName: '', email: '', password: '', repeatPassword: '' }}
+                    initialValues={{ email: '', password: '', confirmPassword: '' }}
+
                     validate={values => {
                         const errors = {};
-
-                        if (!values.firstName) {
-                            errors.firstName = 'Required';
-                        }
-                        if (!values.lastName) {
-                            errors.lastName = 'Required';
-                        }
                         if (!values.email) {
                             errors.email = 'Required';
+                        } else if (
+                            !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)
+                        ) {
+                            errors.email = 'Invalid email address';
                         }
-                        if (values.password.length < 5 ) {
-                            errors.password = "must not exceed 4 digits"
+                        if(values.password.length < 5){
+                            errors.password = 'Debe ser Mayor a 5 digitos';
                         }
-                        if (values.password === values.repeatPassword ) {
-                            errors.repeatPassword = "must be equal to the password"
+                        if(values.confirmPassword === values.password){
+                            errors.confirmPassword = 'es igual a la contraseña'
                         }
                         return errors;
                     }}
@@ -39,34 +36,17 @@ const Register = () => {
                           isValid,
                       }) => (
                         <Form>
-                            <label>Name
-                                <Field type="firstName" name="firstName" className="input"/>
-                            </label>
-                            <ErrorMessage name="firstName" component="div"/>
-                            <label>LastName
-                                <Field type="lastName" name="lastName" className="input"/>
-                            </label>
-                            <ErrorMessage name="lastName" component="div"/>
-                            <label>Email
-                                <Field type="email" name="email" className="input"/>
-                            </label>
-                            <ErrorMessage name="email" component="div"/>
-                            <label>Password
-                                <Field type="password" name="password" className="input"/>
-                            </label>
-                            <ErrorMessage name="password" component="div"/>
-                            <label>Repeat Password
-                                <Field type="password" name="repeatPassword" className="input"/>
-                            </label>
-                            <ErrorMessage name="repeatPassword" component="div"/>
-                            <button
-                                type="submit"
-                                disabled={isSubmitting || isValid }
-                                className="button"
-                            >
-                                Send
-                            </button>
-                        </Form>
+                                <Field type="email" name="email" />
+                                <ErrorMessage name="email" component="div" />
+                                <Field type="password" name="password" />
+                                <ErrorMessage name="password" component="div" />
+                                <Field type="password" name="confirmPassword" />
+                                <ErrorMessage name="confirmPassword" component="div" />
+
+                                <button type="submit" disabled={isSubmitting || isValid}>
+                                    Submit
+                                </button>
+                            </Form>
                     )}
                 </Formik>
             </div>
@@ -74,4 +54,4 @@ const Register = () => {
     );
 };
 
-export default SceneBase(Register);
+export default Register;
