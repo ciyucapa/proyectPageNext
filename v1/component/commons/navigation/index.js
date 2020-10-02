@@ -3,6 +3,7 @@ import Link from "next/link";
 
 import Container from "../container";
 import ItemNav, {HOME_ICON, LOGIN_ICON, REGISTER_ICON, PRODUCT_ICON} from "./itemNavbar";
+import {Assets} from "../../../resourser";
 
 const NavBar = () => {
 
@@ -18,9 +19,9 @@ const NavBar = () => {
         <Container>
             <div className="box-navbar">
                 <div className="contain">
-                    <img src="/logo.gif" alt={"logo-navbar"} className="navbar-logo"/>
+                    <img src={Assets.images.logo} alt={"logo-navbar"} className="navbar-logo"/>
                     <div>
-                        <img src={!changeIcon ? "/menu.png" : "/close.png"} alt={"icon-menu"} className="col-mf navbar-icon" onClick={handleShow}/>
+                        <img src={!changeIcon ? Assets.images.menu : Assets.images.closed} alt={"icon-menu"} className="col-mf navbar-icon" onClick={handleShow}/>
                     </div>
                 </div>
                 <div className="box-contain-one col-md">

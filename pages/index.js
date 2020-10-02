@@ -13,8 +13,12 @@ const Home = () => {
       </Head>
         <Navigation/>
       <main>
-        <CardText/>
-        <Slider/>
+          <section>
+              <CardText/>
+          </section>
+          <section>
+              <Slider/>
+          </section>
       </main>
       <footer>
         <Footer/>

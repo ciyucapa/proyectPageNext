@@ -1,5 +1,6 @@
 import React from 'react';
 import Container from "../container";
+import {Assets} from "../../../resourser";
 
 const Slider = () => {
     return(
@@ -7,15 +8,14 @@ const Slider = () => {
             <div className="sliderBox">
                 <div className="slider">
                     <ul>
-                        <li><img src="/image1.jpg" alt="cushions" /></li>
-                        <li><img src="/image2.jpg" alt="cushions" /></li>
-                        <li><img src="/image3.jpg" alt="cushions" /></li>
-                        <li><img src="/image1.jpg" alt="cushions" /></li>
+                        <li><img src={Assets.images.spiderman} alt="cushions" /></li>
+                        <li><img src={Assets.images.spiderman} alt="cushions" /></li>
+                        <li><img src={Assets.images.spiderman} alt="cushions" /></li>
                     </ul>
                 </div>
             </div>
         </Container>
-    )
+    );
 };
 
 export default Slider;

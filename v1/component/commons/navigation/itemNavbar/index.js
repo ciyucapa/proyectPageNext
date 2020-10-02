@@ -1,5 +1,6 @@
 import Link from "next/link";
 import PropTypes from 'prop-types';
+import {Assets} from "../../../../resourser";
 
 export const LOGIN_ICON = "ItemNav/LOGIN_ICON";
 export const HOME_ICON = "ItemNav/HOME_ICON";
@@ -19,25 +20,25 @@ const ItemNav = (props) => {
                 <a className="col-mf menu-title">
                     {isIcon === HOME_ICON && (
                         <div style={{display: 'flex'}}>
-                            <img src="/home.png" alt={"home-icon"} className="icon" />
+                            <img src={Assets.images.home} alt={"home-icon"} className="icon" />
                             <span>{title}</span>
                         </div>
                     )}
                     {isIcon === LOGIN_ICON && (
                         <div style={{display: 'flex'}}>
-                            <img src="/login-access.png" alt={"login-icon"} className="icon" />
+                            <img src={Assets.images.loginAccess} alt={"login-icon"} className="icon" />
                             <span>{title}</span>
                         </div>
                     )}
                     {isIcon === REGISTER_ICON && (
                         <div style={{display: 'flex'}}>
-                            <img src="/register.png" alt={"register-icon"} className="icon" />
+                            <img src={Assets.images.register} alt={"register-icon"} className="icon" />
                             <span>{title}</span>
                         </div>
                     )}
                     {isIcon === PRODUCT_ICON && (
                         <div style={{display: 'flex'}}>
-                            <img src="/product.png" alt={"product-icon"} className="icon" />
+                            <img src={Assets.images.product} alt={"product-icon"} className="icon" />
                             <span>{title}</span>
                         </div>
                     )}

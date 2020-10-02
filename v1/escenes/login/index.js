@@ -2,6 +2,7 @@ import React from 'react'
 
 import {Formik, Form, Field, ErrorMessage} from 'formik';
 import * as Yup from 'yup';
+import InputField, {EMAIL_ICON, PASSWORD_ICON} from "../../component/commons/input";
 
 const Login = () => {
 
@@ -36,12 +37,12 @@ const Login = () => {
                           isSubmitting,
                           isValid,
                       }) => (
-                        <Form>
-                            <Field type="email" name="email"/>
+                        <Form className="form">
+                            <InputField placeholder={"Email..."} type={"email"} name={"email"} isIcon={EMAIL_ICON}/>
                             <ErrorMessage name="email" component="div" className="error" />
-                            <Field type="password" name="password"/>
+                            <InputField placeholder={"Password..."} type={"password"} name={"password"} isIcon={PASSWORD_ICON}/>
                             <ErrorMessage name="password" component="div" className="error" />
-                            <button type="submit" disabled={isSubmitting}>
+                            <button type="submit" disabled={isSubmitting} className="button">
                                 Submit
                             </button>
                         </Form>

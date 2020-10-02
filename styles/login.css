@@ -16,19 +16,21 @@
     background: #b2f9ff; background: -moz-linear-gradient(135deg,  #b2f9ff 0%,#efebbe 100%); background: -webkit-linear-gradient(135deg,  #b2f9ff 0%,#efebbe 100%); background: linear-gradient(135deg,  #b2f9ff 0%,#efebbe 100%);
 }
 
+.form {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
 .form-title{
     color: #1c5488;
     font-size: 2rem;
 }
 
 .input {
-    display: block;
-    text-align: center;
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
-    padding: 8px ;
-    border: none;
-    border-radius: 100px;
+    margin-top: 10px;
+    padding: 8px;
+    font-size: 15px;
 }
 
 .input:focus{
@@ -37,11 +39,11 @@
 
 .button{
     margin-top: 1rem;
-    padding: 5px 20px;
+    padding: 10px;
     font-size: 1rem;
     font-weight: bold;
-    border: none;
-    border-radius: 50px;
+    color: #f6f6f6;
+    background: gray;
 }
 
 .button:focus{
