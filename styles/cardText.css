@@ -1,0 +1,9 @@
+.card-off {
+    display: none
+}
+
+.card-on {
+    display: flex;
+    width: 600px;
+    height: 340px;
+}
