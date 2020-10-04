@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+
 import {Assets} from "../../../resourser";
 
 export const SPIDERMAN_ICON = 'ItemCard/SPIDERMAN_ICON';

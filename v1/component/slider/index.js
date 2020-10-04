@@ -1,6 +1,7 @@
 import React from 'react';
-import Container from "../commons/container";
+
 import {Assets} from "../../resourser";
+import Container from "../commons/container";
 
 const Slider = () => {
     return(

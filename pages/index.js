@@ -1,4 +1,5 @@
 import Head from 'next/head';
+
 import Navigation from "../v1/component/navigation";
 import Slider from "../v1/component/slider";
 import CardText from "../v1/component/card/card";
