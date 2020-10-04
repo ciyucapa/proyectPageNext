@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react'
 
-import NavBar from "../component/commons/navigation";
+import NavBar from "../component/navigation";
 
 const SceneBase = (props) => {
     const {Child} = props;

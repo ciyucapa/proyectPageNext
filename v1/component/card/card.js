@@ -1,5 +1,5 @@
 import ItemCard, {ESTRELLA_ICON, PINGUINO_ICON, SPIDERMAN_ICON} from "./itemCard";
-import Container from "../container";
+import Container from "../commons/container";
 
 const CardText = () => {
     return(

@@ -1,4 +1,3 @@
-
 import {ErrorMessage, Field, Form, Formik} from "formik";
 
 const Register = () => {
@@ -36,17 +35,17 @@ const Register = () => {
                           isValid,
                       }) => (
                         <Form>
-                                <Field type="email" name="email" />
-                                <ErrorMessage name="email" component="div" />
-                                <Field type="password" name="password" />
-                                <ErrorMessage name="password" component="div" />
-                                <Field type="password" name="confirmPassword" />
-                                <ErrorMessage name="confirmPassword" component="div" />
+                            <Field type="email" name="email" />
+                            <ErrorMessage name="email" component="div" />
+                            <Field type="password" name="password" />
+                            <ErrorMessage name="password" component="div" />
+                            <Field type="password" name="confirmPassword" />
+                            <ErrorMessage name="confirmPassword" component="div" />
 
-                                <button type="submit" disabled={isSubmitting || isValid}>
-                                    Submit
-                                </button>
-                            </Form>
+                            <button type="submit" disabled={isSubmitting || isValid}>
+                                Submit
+                            </button>
+                        </Form>
                     )}
                 </Formik>
             </div>

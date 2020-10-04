@@ -1,8 +1,8 @@
 import Head from 'next/head';
-import Navigation from "../v1/component/commons/navigation";
-import Slider from "../v1/component/commons/slider";
-import CardText from "../v1/component/commons/card/card";
-import Footer from "../v1/component/commons/Footer";
+import Navigation from "../v1/component/navigation";
+import Slider from "../v1/component/slider";
+import CardText from "../v1/component/card/card";
+import Footer from "../v1/component/Footer";
 
 const Home = () => {
   return (
@@ -14,10 +14,10 @@ const Home = () => {
         <Navigation/>
       <main>
           <section>
-              <CardText/>
+              <Slider/>
           </section>
           <section>
-              <Slider/>
+              <CardText/>
           </section>
       </main>
       <footer>

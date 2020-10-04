@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import {Assets} from "../../../resourser";
 
 export const SPIDERMAN_ICON = 'ItemCard/SPIDERMAN_ICON';
 export const PINGUINO_ICON = 'ItemCard/PINGUINO_ICON';
@@ -17,13 +18,13 @@ const ItemCard = (props) => {
                 <h2 className="card-title">{title}</h2>
                 <h3 className=" card-text col-md">{text}</h3>
                 {src === SPIDERMAN_ICON && (
-                    <img src={'/spiderman.jpg'} className="card-image" alt="cojineSpiderman" />
+                    <img src={Assets.images.spiderman} className="card-image" alt="cojineSpiderman" />
                 )}
                 {src === PINGUINO_ICON && (
-                    <img src={'/pinguino.jpg'} className="card-image" alt="cojinePinguino" />
+                    <img src={Assets.images.imagePinguino} className="card-image" alt="cojinePinguino" />
                 )}
                 {src === ESTRELLA_ICON && (
-                    <img src={'/start.jpg'} className="card-image" alt="cojineStar" />
+                    <img src={Assets.images.imageCojinStart} className="card-image" alt="cojineStar" />
                 )}
             </div>
         </div>

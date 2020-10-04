@@ -1,9 +1,9 @@
 import React, {useState} from 'react';
 import Link from "next/link";
 
-import Container from "../container";
+import Container from "../commons/container";
 import ItemNav, {HOME_ICON, LOGIN_ICON, REGISTER_ICON, PRODUCT_ICON} from "./itemNavbar";
-import {Assets} from "../../../resourser";
+import {Assets} from "../../resourser";
 
 const NavBar = () => {
 

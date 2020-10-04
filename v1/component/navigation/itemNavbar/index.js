@@ -1,6 +1,6 @@
 import Link from "next/link";
 import PropTypes from 'prop-types';
-import {Assets} from "../../../../resourser";
+import {Assets} from "../../../resourser";
 
 export const LOGIN_ICON = "ItemNav/LOGIN_ICON";
 export const HOME_ICON = "ItemNav/HOME_ICON";
