@@ -45,6 +45,8 @@
         margin-top: 20px;
         justify-content: center;
         align-content: center;
+        display: flex;
+        flex-direction: row;
     }
 
 .footer-icon {
@@ -65,10 +67,6 @@
         text-align: center;
         flex-wrap: wrap;
         color: #f6f6f6;
-    }
-
-    .footer-one{
-        background: #1c5488;
     }
 
     .footer-two{

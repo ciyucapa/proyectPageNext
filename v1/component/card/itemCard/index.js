@@ -10,7 +10,7 @@ const ItemCard = (props) => {
 
     const {
        title,
-        src,
+        isIcon,
         text,
     } = props
     return(
@@ -18,13 +18,13 @@ const ItemCard = (props) => {
             <div className="card-item">
                 <h2 className="card-title">{title}</h2>
                 <h3 className=" card-text col-md">{text}</h3>
-                {src === SPIDERMAN_ICON && (
+                {isIcon === SPIDERMAN_ICON && (
                     <img src={Assets.images.spiderman} className="card-image" alt="cojineSpiderman" />
                 )}
-                {src === PINGUINO_ICON && (
+                {isIcon === PINGUINO_ICON && (
                     <img src={Assets.images.imagePinguino} className="card-image" alt="cojinePinguino" />
                 )}
-                {src === ESTRELLA_ICON && (
+                {isIcon === ESTRELLA_ICON && (
                     <img src={Assets.images.imageCojinStart} className="card-image" alt="cojineStar" />
                 )}
             </div>
@@ -34,7 +34,7 @@ const ItemCard = (props) => {
 
 ItemCard.propTypes = {
     title: PropTypes.string.isRequired,
-    src: PropTypes.string.isRequired,
+    isIcon: PropTypes.string.isRequired,
     text: PropTypes.string.isRequired,
 };
 

@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import {Field} from 'formik';
 import PropTypes from 'prop-types';
+
 import {Assets} from "../../../resourser";
 
 export const EMAIL_ICON = 'InputField/EMAIL_ICON';
@@ -9,19 +10,20 @@ export const TEXT_ICON = 'InputField/TEXT_ICON';
 
 const InputField = (props) => {
 
-    const [isShow, setShow] = useState(false);
-    const [isShowIcon, setShowIcon] = useState(false);
-    const handleShow = () => {
-        setShow(!isShow);
-        setShowIcon(!isShowIcon);
-    }
-
     const {
         type,
         name,
         placeholder,
         isIcon,
     } = props
+
+    const [isShow, setShow] = useState(false);
+    const [isShowIcon, setShowIcon] = useState(false);
+
+    const handleShow = () => {
+        setShow(!isShow);
+        setShowIcon(!isShowIcon);
+    }
 
     return(
     <div style={{display: 'flex', justifyContent: 'center', backgroundColor: '#f6f6f6', marginTop:10, border: '2px solid #A5AFAA', width: '100%', borderRadius: 50, padding: 5}}>

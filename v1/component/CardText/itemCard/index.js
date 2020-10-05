@@ -10,20 +10,20 @@ export const SANTA_TWO_IMAGE = 'ItemCardText/SANTA_TWO_IMAGE';
 
 const ItemCardText = (props) => {
 
-    const {onClick, src} = props
+    const {onClick, isImage} = props
 
     return(
         <div>
-            {src === SANTA_IMAGE && (
+            {isImage === SANTA_IMAGE && (
                 <img src={Assets.images.imageSanta} style={{width: 200, height:130}} onClick={onClick} alt={"santa"}/>
             )}
-            {src === SET_IMAGE && (
+            {isImage === SET_IMAGE && (
                 <img src={Assets.images.imageCojinSet} style={{width: 200, height:130}} onClick={onClick} alt={"set"}/>
             )}
-            {src === DORADO_IMAGE && (
+            {isImage === DORADO_IMAGE && (
                 <img src={Assets.images.imageCojinDorado} style={{width: 200, height:130}} onClick={onClick} alt={"dorados"}/>
             )}
-            {src === SANTA_TWO_IMAGE && (
+            {isImage === SANTA_TWO_IMAGE && (
                 <img src={Assets.images.imageSantaNew} style={{width: 200, height:130}} onClick={onClick} alt={"santaTwo"}/>
             )}
         </div>
@@ -32,7 +32,7 @@ const ItemCardText = (props) => {
 
 ItemCardText.propTypes = {
     onClick: PropTypes.func,
-    src: PropTypes.string.isRequired,
+    isImage: PropTypes.bool.isRequired,
 };
 
 ItemCardText.defaultProps = {
