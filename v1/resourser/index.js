@@ -27,5 +27,11 @@ export const Assets = {
         product: '/image/product.png',
         logo: '/image/logo.gif',
         logoStatic: '/image/SarahiStyles.png',
+        santaTres: '/image/santatres.jpg',
+        nieveBufanda: '/image/nieveBufanda.jpeg',
+        grandes: '/image/grandes.jpg',
+        collection: '/image/collection.jpg',
+        setVarios: '/image/setVarios.jpeg',
+        redondo: '/image/cojinredondo.jpg',
     },
 };

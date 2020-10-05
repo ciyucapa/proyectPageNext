@@ -1,43 +1,25 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
 
 import Container from "../commons/container";
-import ItemCardText from "./itemCard";
+import ItemCardText, {
+    COLLECTION_IMAGE,
+    SET_VARIOS_IMAGE,
+    GRANDES_IMAGE,
+    NIEVE_IMAGE, REDONDO_IMAGE,
+    SANTA_TRES_IMAGE
+} from "./itemCard";
 import {SANTA_IMAGE, SET_IMAGE, DORADO_IMAGE, SANTA_TWO_IMAGE} from "./itemCard";
 
 import {Assets} from "../../resourser";
 
-export const SANTA = 'CardProduct/SANTA';
-export const DORADO = 'CardProduct/DORADO';
-export const SET = 'CardProduct/SET';
-export const SANTA_TWO = 'CardProduct/SANTA_TWO';
-
 const CardProduct = () => {
-
-    const [cambiarImagen, setCambiar] = useState(false);
-    const [ImageTwo, setImage] = useState(false);
-    const [cambio, setCambio] = useState(false);
-    const [estilo, setEstilo] = useState(false);
-
-    const handleCambiar = () => {
-        setCambiar(true);
-    }
-
-    const handleImage = () => {
-        setImage(true);
-        setEstilo(true);
-    }
-
-    const handleCmbi = () => {
-        setCambio(true);
-    }
 
     return(
         <Container>
             <div style={{display: 'flex', flexDirection:'column', justifyContent: 'center', alignContent: 'center', width: '100%', backgroundColor: 'red',}}>
                 <div style={{display:'flex', width: '100%', paddingTop:20, paddingBottom:20, flexDirection: 'row', justifyContent: 'space-around', alignContent: 'center', alignItems: 'center'}}>
                     <div style={{display: 'flex', justifyContent: 'center', alignContent: 'center', alignItems: 'center'}}>
-                        <img src={cambiarImagen ? Assets.images.imageCojinSet : Assets.images.spiderman} className={estilo ? 'card-off' :'card-on'} alt={'card-image'}/>
-                        {ImageTwo ? <img src={Assets.images.imageSanta} className='card-on'/> : '' }
+                        <img src={Assets.images.setVarios} className='card-on' alt={'card-image'}/>
                     </div>
                     <div style={{display: 'flex', flexDirection: 'column', alignContent: 'center', padding: 10, width: '50%', backgroundColor: 'white'}}>
                         <h1 style={{textAlign: 'center'}}>COJINES ARTESANALES AL MEJOR ESTILO</h1>
@@ -52,10 +34,22 @@ const CardProduct = () => {
                     </div>
                 </div>
                 <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'space-around', alignContent: 'center', alignItems: 'center', backgroundColor: 'pink', paddingTop:20, paddingBottom: 20}}>
-                    <ItemCardText onClick={handleCambiar} isImage={SET_IMAGE} />
-                    <ItemCardText onClick={handleImage} isImage={SANTA_IMAGE} />
-                    <ItemCardText onClick={handleCmbi} isImage={DORADO_IMAGE} />
-                    <ItemCardText isImage={SANTA_TWO_IMAGE} />
+                    <ItemCardText isImage={SET_IMAGE} />
+                    <ItemCardText  isImage={SANTA_IMAGE} />
+                    <ItemCardText  isImage={DORADO_IMAGE} />
+                    <ItemCardText  isImage={SANTA_TWO_IMAGE} />
+                </div>
+                <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'space-around', alignContent: 'center', alignItems: 'center', backgroundColor: 'pink', paddingTop:20, paddingBottom: 20}}>
+                    <ItemCardText isImage={COLLECTION_IMAGE} />
+                    <ItemCardText  isImage={SET_VARIOS_IMAGE} />
+                    <ItemCardText  isImage={SANTA_TRES_IMAGE} />
+                    <ItemCardText  isImage={NIEVE_IMAGE} />
+                </div>
+                <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'space-around', alignContent: 'center', alignItems: 'center', backgroundColor: 'pink', paddingTop:20, paddingBottom: 20}}>
+                    <ItemCardText isImage={GRANDES_IMAGE} />
+                    <ItemCardText  isImage={REDONDO_IMAGE} />
+                    <ItemCardText  isImage={DORADO_IMAGE} />
+                    <ItemCardText  isImage={SANTA_TWO_IMAGE} />
                 </div>
             </div>
         </Container>
