@@ -33,5 +33,7 @@ export const Assets = {
         collection: '/image/collection.jpg',
         setVarios: '/image/setVarios.jpeg',
         redondo: '/image/cojinredondo.jpg',
+        visible: '/image/visible.png',
+        visibleOcultar: '/image/visible-ocultar.png',
     },
 };

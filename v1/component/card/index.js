@@ -1,13 +1,14 @@
-import ItemCard, {ESTRELLA_ICON, PINGUINO_ICON, SPIDERMAN_ICON} from "./itemCard";
 import Container from "../commons/container";
+import CardVertical from "../commons/cardVertical";
+import {SPIDERMAN_ICON, ESTRELLA_ICON, PINGUINO_ICON} from "../commons/image";
 
 const CardText = () => {
     return(
         <Container>
             <div className="card-container">
-                <ItemCard title={"Cojin Decorativo"} text={"Spiderman"} isIcon={SPIDERMAN_ICON} alt="cojin" />
-                <ItemCard title={"Cojin Infantil"} text={"Estrella"} isIcon={ESTRELLA_ICON} alt="start"/>
-                <ItemCard title={"Cojin Navideño"} text={"Pinguino"} isIcon={PINGUINO_ICON} alt="cojin"/>
+                <CardVertical title={"Cojin Decorativo"} text={"Spiderman"} isImage={SPIDERMAN_ICON} />
+                <CardVertical title={"Cojin Infantil"} text={"Estrella"} isImage={ESTRELLA_ICON} />
+                <CardVertical title={"Cojin Navideño"} text={"Pinguino"} isImage={PINGUINO_ICON} />
             </div>
         </Container>
     );

@@ -1,12 +1,12 @@
 import SceneBase from "../SceneBase";
-import CardProduct from "../../component/CardText";
+import CardTextHorizontal from "../../component/cardHorizontal";
 
 
 const Product = () => {
     return(
         <div>
             <h1>Productos</h1>
-            <CardProduct/>
+            <CardTextHorizontal/>
         </div>
     );
 };
