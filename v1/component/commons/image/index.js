@@ -19,6 +19,7 @@ export const ESTRELLA_ICON = 'ImageField/ESTRELLA_ICON';
 export const EMAIL_ICON = 'ImageField/EMAIL_ICON';
 export const TEXT_ICON = 'ImageField/TEXT_ICON';
 export const PASSWORD_ICON = 'ImageField/PASSWORD_ICON';
+export const MENU_ICON = 'ImageField/MENU_ICON';
 
 const ImageField = (props) => {
 
@@ -73,6 +74,9 @@ const ImageField = (props) => {
             )}
             { isImage === PASSWORD_ICON &&(
                 <img src={!isShowIcon ? Assets.images.visible : Assets.images.visibleHide } onClick={onClick} style={{opacity:0.5, width: 25, height:25}}  alt={"visible"} />
+            )}
+            { isImage === MENU_ICON &&(
+                <img src={!isShowIcon ? Assets.images.menu : Assets.images.closed} className="col-mf navbar-icon" onClick={onClick} alt={"icon-menu"}/>
             )}
         </div>
     );

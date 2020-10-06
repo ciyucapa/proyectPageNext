@@ -4,6 +4,7 @@ import Link from "next/link";
 import Container from "../commons/container";
 import ItemNav, {HOME_ICON, LOGIN_ICON, REGISTER_ICON, PRODUCT_ICON} from "./itemNavbar";
 import {Assets} from "../../resourser";
+import ImageField, {MENU_ICON} from "../commons/image";
 
 const NavBar = () => {
 
@@ -21,7 +22,7 @@ const NavBar = () => {
                 <div className="contain">
                     <img src={Assets.images.logo} alt={"logo-navbar"} className="navbar-logo"/>
                     <div>
-                        <img src={!changeIcon ? Assets.images.menu : Assets.images.closed} alt={"icon-menu"} className="col-mf navbar-icon" onClick={handleShow}/>
+                        <ImageField isImage={MENU_ICON} onClick={handleShow} isShowIcon={changeIcon}/>
                     </div>
                 </div>
                 <div className="box-contain-one col-md">
