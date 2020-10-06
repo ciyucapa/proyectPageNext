@@ -9,9 +9,9 @@ const Slider = () => {
             <div className="sliderBox">
                 <div className="slider">
                     <ul>
-                        <li><img src={Assets.images.imageCojinDorado} alt="cushions" /></li>
-                        <li><img src={Assets.images.imageCojinesGlo} alt="cushions" /></li>
-                        <li><img src={Assets.images.imageCojinSet} alt="cushions" /></li>
+                        <li><img src={Assets.images.imageCushionDorado} alt="cushions" /></li>
+                        <li><img src={Assets.images.imageCushionGlo} alt="cushions" /></li>
+                        <li><img src={Assets.images.imageCushionSet} alt="cushions" /></li>
                         <li><img src={Assets.images.imageSantaNew} alt="cushions" /></li>
                     </ul>
                 </div>
