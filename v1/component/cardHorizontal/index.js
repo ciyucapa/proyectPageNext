@@ -6,8 +6,7 @@ const CardTextHorizontal = () => {
     return(
         <Container>
             <div>
-                <CardHorizontal title={'Cojines Navideños'} subtitle={'Caracteristicas'} text={'elaborado con fibra de poliester siiconado'}
-                                subtitleTwo={'Medidas'} textOne={'35 cm x 35 cm'} textTwo={'40 cm x 40 cm'} textThree={'45 cm x 45 cm'} isImage={SANTA_IMAGE}/>
+                <CardHorizontal title={'Cojines Navideños'} subtitle={'Caracteristicas'} text={'elaborado con fibra de poliester siiconado'} subtitleTwo={'Medidas'} textOne={'35 cm x 35 cm'} textTwo={'40 cm x 40 cm'} textThree={'45 cm x 45 cm'} isImage={SANTA_IMAGE}/>
             </div>
         </Container>
     );

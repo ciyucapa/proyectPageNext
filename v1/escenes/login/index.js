@@ -1,9 +1,9 @@
 import React, {useState} from 'react'
-import {Formik, Form, Field, ErrorMessage} from 'formik';
-import * as Yup from 'yup';
+import {Formik, Form, ErrorMessage} from 'formik';
 
 import InputField from "../../component/commons/input";
 import {EMAIL_ICON, PASSWORD_ICON} from "../../component/commons/image";
+import {Assets} from "../../resourser";
 
 const Login = () => {
 
@@ -16,7 +16,7 @@ const Login = () => {
     return (
         <div>
             <div className="box-login">
-                <img src="/login.png" style={{width:150, height:150 }} alt="login"/>
+                <img src={Assets.images.loginAccess} style={{width:70, height:70 }} alt="login"/>
                 <h1 className="form-title">Login In</h1>
                 <Formik
                     initialValues={{ email: '', password: '' }}
@@ -31,7 +31,7 @@ const Login = () => {
                             errors.email = 'Invalid email address';
                         }
                         if(values.password.length < 5){
-                            errors.password = 'Debe ser Mayor a 5 digitos';
+                            errors.password = 'must be greater than 5 digits';
                         }
                         return errors;
                     }}

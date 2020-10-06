@@ -16,8 +16,8 @@ const InputField = (props) => {
     } = props
 
     return(
-    <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'center', backgroundColor: '#f6f6f6', marginTop:10, border: '2px solid #A5AFAA', width: '100%', borderRadius: 50, padding: 5}}>
-        <Field type={type} name={name} placeholder={placeholder} style={{border: 'none', outline: 'none'}}/>
+    <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'space-around', alignContent: 'center', alignItems: 'center', backgroundColor: '#f6f6f6', marginTop:10, border: '2px solid #A5AFAA', width: '100%', borderRadius: 50, paddingLeft: 20, paddingRight: 20}}>
+        <Field type={type} name={name} placeholder={placeholder} style={{border: 'none', outline: 'none', background: 'none', width: '100%', paddingTop: 10, paddingBottom: 10}}/>
         <ImageField isImage={isIcon} onClick={onClick} isShowIcon={isShowIcon}/>
     </div>
     );
