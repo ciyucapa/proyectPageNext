@@ -4,7 +4,7 @@ import '../styles/card.css';
 import '../styles/navbar.css';
 import '../styles/slider.css';
 import '../styles/footer.css';
-import '../styles/cardText.css';
+import '../styles/cardHorizontal.css';
 
 import React from 'react';
 

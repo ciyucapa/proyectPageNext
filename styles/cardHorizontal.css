@@ -1,0 +1,75 @@
+.box-card-horizontal{
+    background: #f4f1bb;
+    display: flex;
+    justify-content: center;
+    width:100%;
+    padding: 10px;
+
+    -webkit-box-shadow: 0 2px 12px 1px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0 2px 12px 1px rgba(0,0,0,0.75);
+    box-shadow: 0 2px 12px 1px rgba(0,0,0,0.75);
+}
+
+.caja{
+    align-items: center;
+    align-content: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 20px;
+}
+
+    .caja-uno{
+        align-items: center;
+        align-content: center;
+        display: flex;
+        padding: 5px;
+    }
+
+    .caja-dos{
+        align-content: center;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-bottom: 5px;
+    }
+
+.card-title{
+    color: black;
+    text-align: center;
+}
+
+.image{
+    height: 300px;
+    width: 450px;
+}
+
+@media (max-width: 919px) {
+    .image{
+        width: 200px;
+        height: 100px;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    .box-card-horizontal{
+        padding: 0;
+        margin-top: 10px;
+    }
+
+    .caja{
+        justify-content: center;
+        padding: 0;
+    }
+
+    .caja-uno{
+        padding: 0;
+    }
+
+    .caja-dos{
+        font-size: 10px;
+        background: #f6f6f6;
+    }
+}

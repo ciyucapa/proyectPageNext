@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react'
 
 import NavBar from "../component/navigation";
+import Footer from "../component/Footer";
 
 const SceneBase = (props) => {
     const {Child} = props;
@@ -9,6 +10,8 @@ const SceneBase = (props) => {
         <div>
             <NavBar/>
             <Child />
+            <div style={{width:'100%', height: 500}}/>
+            <Footer/>
         </div>
     );
 };

@@ -20,6 +20,7 @@ export const EMAIL_ICON = 'ImageField/EMAIL_ICON';
 export const TEXT_ICON = 'ImageField/TEXT_ICON';
 export const PASSWORD_ICON = 'ImageField/PASSWORD_ICON';
 export const MENU_ICON = 'ImageField/MENU_ICON';
+export const LOGO_ICON = 'ImageField/LOGO_ICON';
 
 const ImageField = (props) => {
 
@@ -28,7 +29,7 @@ const ImageField = (props) => {
     return(
         <div>
             {isImage === SANTA_IMAGE && (
-                <img src={Assets.images.imageSanta} style={{width: 200, height:130}} onClick={onClick} alt={"santa"}/>
+                <img src={Assets.images.imageSanta} onClick={onClick} alt={"santa"} style={{width: 200, height:130}}/>
             )}
             {isImage === SET_IMAGE && (
                 <img src={Assets.images.imageCushionSet} style={{width: 200, height:130}} onClick={onClick} alt={"set"}/>
@@ -78,6 +79,9 @@ const ImageField = (props) => {
             { isImage === MENU_ICON &&(
                 <img src={!isShowIcon ? Assets.images.menu : Assets.images.closed} className="col-mf navbar-icon" onClick={onClick} alt={"icon-menu"}/>
             )}
+            { isImage === LOGO_ICON &&(
+                <img src={Assets.images.logo} style={{width: 100, height:100}} alt={'logo'} />
+            )}
         </div>
     );
 };
@@ -86,6 +90,7 @@ ImageField.propTypes = {
     onClick: PropTypes.func,
     isImage: PropTypes.bool.isRequired,
     isShowIcon: PropTypes.bool,
+    style: PropTypes.shape,
 };
 
 ImageField.defaultProps = {};

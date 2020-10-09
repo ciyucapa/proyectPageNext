@@ -1,27 +1,29 @@
 import React from 'react';
-
 import PropTypes from "prop-types";
-import ImageField from "../image";
+
+import {Assets} from "../../../resourser";
 
 const CardHorizontal = (props) => {
 
-    const {isImage, title, subtitle, text, subtitleTwo, textOne, textTwo, textThree,} = props
+    const {title, subtitle, text, subtitleTwo, textOne, textTwo, textThree,} = props
 
     return(
-        <div className="box-card" >
-            <div style={{display: 'flex', justifyContent: 'center', alignContent: 'center', alignItems: 'center'}}>
-                <ImageField isImage={isImage} alt={'card-image'}/>
+            <div className="box-card-horizontal">
+                <div className={'caja'}>
+                    <div className="caja-uno">
+                        <img src={Assets.images.imageSanta} className="image"/>
+                    </div>
+                    <div className="caja-dos">
+                        <h1 className="card-title">{title}</h1>
+                        <h3>{subtitle}</h3>
+                        <span>{text}</span>
+                        <h4>{subtitleTwo}</h4>
+                        <span>{textOne}</span>
+                        <span>{textTwo}</span>
+                        <span>{textThree}</span>
+                    </div>
+                </div>
             </div>
-            <div style={{display: 'flex', flexDirection: 'column', alignContent: 'center', padding: 10}}>
-                <h1 style={{textAlign: 'center'}}>{title}</h1>
-                <h3>{subtitle}</h3>
-                <span>{text}</span>
-                <h3>{subtitleTwo}</h3>
-                <span>{textOne}</span>
-                <span>{textTwo}</span>
-                <span>{textThree}</span>
-            </div>
-        </div>
     );
 };
 
@@ -33,7 +35,6 @@ CardHorizontal.propTypes = {
     textOne: PropTypes.string.isRequired,
     textTwo: PropTypes.string.isRequired,
     textThree: PropTypes.string.isRequired,
-    isImage: PropTypes.bool.isRequired,
 };
 
 CardHorizontal.defaultProps = {};
